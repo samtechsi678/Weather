@@ -1,4 +1,4 @@
-package com.weathercast
+package com.myuniqueweatherapp
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

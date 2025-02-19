@@ -16,7 +16,7 @@
     "dayjs": "^1.11.13",
     "lottie-react-native": "^7.2.2",
     "react": "18.3.1",
-    "react-native": "0.77.0",
+    "react-native": "^0.76.1",
     "react-native-linear-gradient": "^2.8.3",
     "react-native-vector-icons": "^10.2.0",
     "reactotron-react-native": "^5.1.12",

@@ -11,7 +11,22 @@ export const GetWeather = async place => {
     );
     return response;
   } catch (error) {
-    Alert.alert('Wrong Location', 'Enter correct location name');
-    return null;
+    // Log detailed error info
+    if (error.response) {
+      // Server responded with a status outside the 2xx range
+      Alert.alert(
+        'Error',
+        `Server Error: ${error.response.status} - ${error.response.data.error.message}`,
+      );
+    } else if (error.request) {
+      // No response received
+      Alert.alert(
+        'Network Error',
+        'No response received. Check your internet connection.',
+      );
+    } else {
+      // Something else happened
+      Alert.alert('Request Failed', error.message);
+    }
   }
 };

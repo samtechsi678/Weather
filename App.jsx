@@ -12,6 +12,7 @@ import {StatusBar} from 'react-native';
 if (__DEV__) {
   require('./ReactotronConfig');
 }
+
 const App = () => {
   const [weather, setWeather] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -29,6 +30,7 @@ const App = () => {
   useEffect(() => {
     GetCurrentLocation(handleCurrentLocation);
   }, []);
+
   const currentWeatherLocation = async location => {
     setLoading(true);
     const result = await GetWeather(location);
